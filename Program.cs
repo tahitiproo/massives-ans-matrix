@@ -61,7 +61,7 @@ namespace Homework
         {
             double sum = 0;
             double sr_arif = 1;
-            double[] averageMas = new double[12];
+            double[] srednMas = new double[12];
 
             for (int i = 0; i < temperature.GetLength(0); i++)
             {
@@ -71,18 +71,18 @@ namespace Homework
                     sum += temperature[i, j];
                     sr_arif = Math.Round(sum / 30, 2);
                 }
-                averageMas[i] = sr_arif;
+                srednMas[i] = sr_arif;
                 Console.WriteLine($"Средняя температура в {i + 1} месяце - {sr_arif}");
             }
-            Array.Sort(averageMas);
+            Array.Sort(srednMas);
             Console.WriteLine("Средние значения температур в месяцах по возрастанию: ");
-            foreach (double i in averageMas)
+            foreach (double i in srednMas)
                 Console.Write(i + " ");
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Тумаков, классное 6.1, количество гласных и согласных в файле");
-            string readText = File.ReadAllText(@"C:\text.txt");
+            Console.WriteLine("Тумаков 6.1");
+            string readText = File.ReadAllText(@"C:\Users\Username\source\repos\DZ\DZ\filename.txt");
             char[] array = readText.ToLower().ToCharArray();
             char[] vowels = "АЕЁИОУЫЭЮЯ".ToLower().ToCharArray();
             char[] consonants = "БВГДЖЗЙКЛМНПРСТФХЦЧШЩЬЪ".ToLower().ToCharArray();
@@ -91,7 +91,7 @@ namespace Homework
             Console.WriteLine();
 
 
-            Console.WriteLine("Тумаков, классное 6.2, умножение двух матриц");
+            Console.WriteLine("Тумаков 6.2");
             Random random = new Random();
             byte m = (byte)random.Next(1, 3);
             byte n = (byte)random.Next(1, 3);
@@ -123,7 +123,7 @@ namespace Homework
             MatrixMultiplication(A, B);
             Console.WriteLine();
 
-            Console.WriteLine("Тумаков, классное 6.3, средняя температура за год");
+            Console.WriteLine("Тумаков дз 6.1");
             Random rand = new Random();
             double[,] temperature = new double[12, 30];
             for (int j = 0; j < 30; j++)
